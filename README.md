@@ -12,6 +12,7 @@ Description:
  ![{80A03430-E877-4104-859C-52775756BE1B}](https://github.com/user-attachments/assets/159423ad-39f3-4c00-85a3-a4980e8b3c8a)
  
  ● Resistor value will be integer or float number.
+ 
  ● Types of electrical circuit :
  1- Series (will be represented as S or s )
  2- Parallel (will be represented as P or p )
