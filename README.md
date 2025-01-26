@@ -14,8 +14,11 @@ Description:
  ● Resistor value will be integer or float number.
  
  ● Types of electrical circuit :
+ 
  1- Series (will be represented as S or s )
+ 
  2- Parallel (will be represented as P or p )
+ 
  ● It is guaranteed that each connection will end by e (ex:S11e)
 
 App Features:
