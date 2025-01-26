@@ -29,6 +29,7 @@ App Features:
  (ex: P 1 2 S 1 1 e e Act as P 1 2 2 e )
 
  Error handling:
+ 
  --The Program checks the number of resistors,for **Series**
  connection it must have 1 resistor or more,for **Parallel** connection
  it must have 2 resistors or more,otherwise print error message “IncorrectInput”.
