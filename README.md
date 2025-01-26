@@ -25,9 +25,9 @@ App Features:
  1. Enable users to input electrical circuit configurations using one string
  representation.
  (The input is one string only)
- 2. TheCircuit Analyzer must handle electrical circuit that has up to
+ 2. The Circuit Analyzer handles electrical circuits that has up to
  12 resistors.
- 3. TheCircuit Analyzer must handle 1 Parent type of electrical circuit with
+ 3. The Circuit Analyzer handles 1 Parent type of electrical circuits with
  multiple childs connections, As we can replace 1 resistor value by a
  connection.
  (ex: P 1 2 S 1 1 e e Act as P 1 2 2 e )
