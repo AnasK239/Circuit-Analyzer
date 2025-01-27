@@ -1,6 +1,4 @@
 # Project Description
-
-Description:
  
  ● Developing a C++ program that calculates the total resistance of an
  electrical circuit based on a user-provided string description. The electrical
