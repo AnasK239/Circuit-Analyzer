@@ -89,7 +89,14 @@ bool ValidDescription(string s)
 {
     for (int i = 0; i < s.length(); i++)
     {
-        if (s[i] != '.' && !isdigit(s[i]) && s[i] != 's' && s[i] != 'p' && s[i] != 'S' && s[i] != 'P' && s[i] != 'e' && s[i] != ' ')
+        if (s[i] != '.' && 
+            !isdigit(s[i]) && 
+            s[i] != 's' && 
+            s[i] != 'p' && 
+            s[i] != 'S' && 
+            s[i] != 'P' && 
+            s[i] != 'e' && 
+            s[i] != ' ')
         {
             cout << "Wrong Description";
             return 0;
