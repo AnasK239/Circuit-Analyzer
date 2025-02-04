@@ -4,9 +4,9 @@
 using namespace std;
 
 bool ValidDescription(string s);
-float get_equivalent_resistance(vector<string> circuit);
-float calculate_seriesR(vector<float> numbers);
-float calculate_parallelR(vector<float> numbers);
+float get_equivalent_resistance(const vector<string> &circuit);
+float calculate_seriesR(const vector<float> &numbers);
+float calculate_parallelR(const vector<float> &numbers);
 
 int main()
 {
@@ -30,7 +30,7 @@ int main()
         cout << "The total resistance = " << z;
 }
 
-float get_equivalent_resistance(vector<string> circuit)
+float get_equivalent_resistance(const vector<string> &circuit)
 {
     vector<float> Rvalues;
     for (int i = 1; i < circuit.size(); i++)
@@ -89,42 +89,38 @@ bool ValidDescription(string s)
 {
     for (int i = 0; i < s.length(); i++)
     {
-        if (s[i] != '.' && 
-            !isdigit(s[i]) && 
-            s[i] != 's' && 
-            s[i] != 'p' && 
-            s[i] != 'S' && 
-            s[i] != 'P' && 
-            s[i] != 'e' && 
-            s[i] != ' ')
+        if (s[i] >= 65 && s[i] <= 122  && s[i] != 'e')
         {
+            if (s[i] != 's' && s[i] != 'S' && s[i]!='p' &&s[i]!='P')
+            {
             cout << "Wrong Description";
-            return 0;
+            return false;
+            }
         }
     }
-    return 1;
+    return true;
 }
 
-float calculate_seriesR(vector<float> numbers)
+float calculate_seriesR(const vector<float> &numbers)
 {
     float Req = 0;
-    if (numbers.size() < 1)
+    if (numbers.empty())
         return 0;
 
-    for (int i = 0; i < numbers.size(); i++){
-        Req += numbers[i];
+    for (const float number : numbers){
+        Req += number;
         }
     return Req;
 }
 
-float calculate_parallelR(vector<float> numbers)
+float calculate_parallelR(const vector<float> &numbers)
 {
     float Req = 0;
     if (numbers.size() < 2)
         return 0;
 
-    for (int i = 0; i < numbers.size(); i++){
-        Req += (1 / numbers[i]);
+    for (const float number : numbers){
+        Req += (1 / number);
     }
     return (1 / Req);
 }
